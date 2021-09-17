@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       // run tests in a directory, so projects wishing to do this would add a
       // separate task and hard-code the test groups that need to run.
       var majorVersion = Drupal.majorVersion();
-      if (majorVersion !== 8 && self.target === 'drupal') {
+      if (majorVersion < 8 && self.target === 'drupal') {
         grunt.verbose.write('Running Drupal tests by directory is ' +
           'unsupported in Drupal 7. Create a custom task to run test groups ' +
           'as needed.');
